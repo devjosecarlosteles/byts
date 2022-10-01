@@ -1,4 +1,7 @@
-export interface IEnv {
+export interface IEnvGetCore {
   envName: string;
-  envValue?: string;
+}
+
+export interface IEnvSetCore extends IEnvGetCore {
+  envValue: string;
 }

@@ -3,7 +3,7 @@ import { IEnvAdapter } from "./interfaces/IEnv";
 
 const envAdapter: IEnvAdapter = {
   get: (envName) => envGet({ envName }),
-  set: (envName) => envSet({ envName })    
+  set: (envName, envValue) => envSet({ envName, envValue })    
 }
 
 export { envAdapter };
