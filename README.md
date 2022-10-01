@@ -1,4 +1,4 @@
-# BYts
+# Toths
 
 Ferramenta de desenvolvimento produtivo para Javascript e Typescript.
 

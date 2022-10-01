@@ -1,6 +1,6 @@
-import toths from '../../toths';
+import toths from '../../../toths';
 
-import messagesErrorsOfEnv from "../errors/env.json";
+import messagesErrorsOfEnv from "../../errors/env.json";
 
 describe("testing environment module", () => {
   it("should return void", () => {
@@ -19,3 +19,4 @@ describe("testing environment module", () => {
     }
   })
 });
+
