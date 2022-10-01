@@ -30,3 +30,37 @@ get (envName: string): any;
 
   byts.env.get("ACCESS_TOKEN"); // eyJhbGciOiJIUzI1NiIsIm1lc3NhZ2UiO...
 ```
+
+## Log
+
+Com esse módulo é possível disparar mensagens de log com aspectos diferentes das comumente usadas, como um log que já é publicado com a data atual e com o tipo de info, warn ou error.
+
+### Info
+
+Usado para exebir uma informação.
+
+```ts
+import toths from "toths";
+
+toths.info("Hello World"); // [INFO] DD:MM:YYYY 00:00 - Hello World
+```
+
+### Warn
+
+Usado para exibir um alerta.
+
+```ts
+import toths from "toths";
+
+toths.warn("Hello World"); // [WARN] DD:MM:YYYY 00:00 - Hello World
+```
+
+### Error
+
+Usado para exebir um erro.
+
+```ts
+import toths from "toths";
+
+toths.error("Hello World"); // [ERROR] DD:MM:YYYY 00:00 - Hello World
+```
