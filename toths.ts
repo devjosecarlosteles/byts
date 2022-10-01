@@ -1,7 +1,7 @@
 import { envAdapter } from "./src/adapters/env";
 
-const byts = {
+const toths = {
   env: envAdapter,
 }
 
-export default byts;
+export default toths;
