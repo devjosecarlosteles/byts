@@ -1,4 +1,4 @@
-import { envAdapter } from "./src/adapter/env";
+import { envAdapter } from "./src/adapters/env";
 
 const byts = {
   env: envAdapter,
