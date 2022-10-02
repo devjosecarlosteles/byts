@@ -6,7 +6,8 @@
   "author": "devjosecarlosteles <devjosecarlosteles@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "dev": "node dist/test.js"
   },
   "devDependencies": {
     "@types/node": "^18.7.23",
