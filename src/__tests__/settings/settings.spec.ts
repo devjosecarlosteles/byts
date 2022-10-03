@@ -11,5 +11,18 @@ describe("testing settings module", () => {
     }
 
     expect(toths.settings.defaultSettings()).toStrictEqual(defaultSettings);
-  }); 
+  });
+
+  it("should test import settings", () => {
+    const expectSettings : ISettings = {
+      logSettings: {
+        saveInFile: true,
+        showInConsole: true
+      }
+    }
+
+    const path = "C:/Users/devjo/workspaces/www/byts/src/__tests__/settings/settings.json"
+
+    expect(toths.settings.import(path)).toStrictEqual(expectSettings);
+  });
 })

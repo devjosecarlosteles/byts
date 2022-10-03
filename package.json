@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "test": "jest",
-    "dev": "node dist/test.js"
+    "dev": "tsc && node dist/usefk.js"
   },
   "devDependencies": {
     "@types/node": "^18.7.23",

@@ -64,3 +64,33 @@ import toths from "toths";
 
 toths.error("Hello World"); // [ERROR] DD:MM:YYYY 00:00 - Hello World
 ```
+
+## Settings
+
+Configura a ferramenta de acordo com usas preferências.
+
+### Import
+
+crie um arquivo de configurações ``` toths-settings.json ``` esse arquivo pode conter as configurações de sua preferência, <a href="#Settings.JSON">clique aqui</a> para ver as configurações possíveis.
+
+<table>
+  <thead>
+    <tr>
+      <th>Parâmetro</th>
+      <th>Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+        <td>path</td>
+        <td>Caminho até o arquivo de configuração</td>
+      </tr>
+  </tbody>
+</trable>
+
+```
+import toths from "./toths";
+
+toths.settings.import("filepath/settings.json");
+
+```

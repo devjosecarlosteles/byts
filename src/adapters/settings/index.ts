@@ -3,15 +3,31 @@ import { importSettingsCore, defaultSettingsCore } from '../../core/settings/ind
 import fs from "fs";
 import { ISettings } from '../../interfaces/settings/ISettings';
 
-export const settingsAdapter : ISettingsAdapter = {
-  import: (path: string) => {
-    const settingsFile = fs.readFileSync(path, { encoding: "utf-8" });
+export const settingsAdapter = (useSettings?: ISettings, callback?: (cahngeState: boolean, settings: ISettings) => void) : ISettingsAdapter => {
+  return {
+    import: (path: string) => {
+      const settingsFile = fs.readFileSync(path, { encoding: "utf-8" });
+  
+      const settingsFileToJson : ISettings = JSON.parse(settingsFile);
+  
+      const settingsCore = importSettingsCore(settingsFileToJson);
 
-    const settingsFileToJson : ISettings = JSON.parse(settingsFile);
-
-    return importSettingsCore (settingsFileToJson);
-  }, 
-  defaultSettings: () => {
-    return defaultSettingsCore();
+      useSettings = settingsCore;
+      
+      if (callback) {
+        callback(true, useSettings);
+      }
+      
+      return settingsCore;
+    }, 
+    defaultSettings: () => {
+      const setDefaultSettings = defaultSettingsCore();
+      
+      if (callback) {
+        callback(true, setDefaultSettings);
+      }
+      
+      return defaultSettingsCore();
+    } 
   }
 }

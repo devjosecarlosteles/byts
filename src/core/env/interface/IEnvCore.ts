@@ -3,5 +3,5 @@ export interface IEnvGetCore {
 }
 
 export interface IEnvSetCore extends IEnvGetCore {
-  envValue: string;
+  envValue: string | number | boolean;
 }

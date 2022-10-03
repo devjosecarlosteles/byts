@@ -2,12 +2,17 @@ import { envAdapter } from "./src/adapters/env";
 import { LogAdapter } from './src/adapters/log/index';
 import { settingsAdapter } from './src/adapters/settings/index';
 
+
+var useSettings = settingsAdapter().defaultSettings();
+
 const toths = {
   env: envAdapter,
-  info: (message: string) => LogAdapter.info({ message, settings: "" }),
-  warn: (message: string) => LogAdapter.warn({ message, settings: "" }),
-  error: (message: string) => LogAdapter.error({ message, settings: "" }),
-  settings: settingsAdapter
+  info: (message: string) => LogAdapter.info({ message, settings: useSettings }),
+  warn: (message: string) => LogAdapter.warn({ message, settings: useSettings }),
+  error: (message: string) => LogAdapter.error({ message, settings: useSettings }),
+  settings: settingsAdapter(useSettings, ((changeSettings, settings) => {
+    changeSettings ? useSettings = settings : null;
+  })),
 }
 
 export default toths;
