@@ -17,7 +17,7 @@ describe("testing settings module", () => {
     const expectSettings : ISettings = {
       logSettings: {
         saveInFile: true,
-        showInConsole: true
+        showInConsole: false
       }
     }
 
