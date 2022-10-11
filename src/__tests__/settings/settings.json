@@ -1,7 +1,6 @@
 {
   "logSettings": {
     "showInConsole": false,
-    "saveInFile": true,
-    "pathLog": "c:/users/devjo/desktop"
+    "saveInFile": true
   }
 }

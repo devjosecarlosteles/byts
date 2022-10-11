@@ -6,7 +6,7 @@ import TimeNow from '../../../utils/timeNow';
 export function createFile(logSettings: ILogSettings, message: string) {
   const { pathLog } = logSettings;
 
-  const outPath = pathLog ? `${ pathLog }/${ DateNow().join("_") }_${ TimeNow().join("_") }.txt` : `${ __dirname }/logs/${ new Date() }.txt`;
+  const outPath = pathLog ? `${ pathLog }/log${ DateNow().join("_") }_${ TimeNow().join("_") }.txt` : `${ __dirname }/logs/log${ DateNow().join("_") }_${ TimeNow().join("_") }.txt`;
 
   fs.writeFileSync(outPath, message); 
 }

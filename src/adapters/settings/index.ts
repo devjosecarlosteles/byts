@@ -10,7 +10,7 @@ export const settingsAdapter = (useSettings?: ISettings, callback?: (cahngeState
   
       const settingsFileToJson : ISettings = JSON.parse(settingsFile);
   
-      const settingsCore = importSettingsCore(settingsFileToJson);
+      const settingsCore =  (settingsFileToJson);
 
       useSettings = settingsCore;
       
