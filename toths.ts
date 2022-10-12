@@ -1,6 +1,7 @@
 import { envAdapter } from "./src/adapters/env";
 import { LogAdapter } from './src/adapters/log/index';
 import { settingsAdapter } from './src/adapters/settings/index';
+import { apiAdapter } from './src/adapters/api/index';
 
 
 var useSettings = settingsAdapter().defaultSettings();
@@ -13,6 +14,7 @@ const toths = {
   settings: settingsAdapter(useSettings, ((changeSettings, settings) => {
     changeSettings ? useSettings = settings : null;
   })),
+  api: apiAdapter
 }
 
 export default toths;

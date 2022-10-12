@@ -4,4 +4,4 @@ const app = express();
 
 app.use(express.json());
 
-export const api = app;
+export const apiCore = app;

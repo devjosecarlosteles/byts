@@ -1,5 +1,9 @@
 import toths from "./toths";
 
-toths.settings.import("C:/Users/devjo/workspaces/www/byts/settings.json");
+const api = toths.api;
 
-toths.info("me segue ae!");
+api.get("/", (req ,res) => {
+  res.status(200).send();
+});
+
+api.listen(3333, () => console.log("server running in localhost:3333"))
