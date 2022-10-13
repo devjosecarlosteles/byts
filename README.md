@@ -14,9 +14,9 @@ seta uma variável de ambiente no sistema.
 
 
 ```ts
-  import byts from "byts";
+  import toths from "toths";
 
-  byts.env.set("ACCESS_TOKEN", "eyJhbGciOiJIUzI1NiIsIm1lc3NhZ2UiO...");
+  toths.env.set("ACCESS_TOKEN", "eyJhbGciOiJIUzI1NiIsIm1lc3NhZ2UiO...");
 ```
 
 ### get
@@ -26,9 +26,9 @@ retorna o valor presente em uma variável de ambiente.
 get (envName: string): any;
 
 ```ts
-  import byts from "byts";
+  import toths from "toths";
 
-  byts.env.get("ACCESS_TOKEN"); // eyJhbGciOiJIUzI1NiIsIm1lc3NhZ2UiO...
+  toths.env.get("ACCESS_TOKEN"); // eyJhbGciOiJIUzI1NiIsIm1lc3NhZ2UiO...
 ```
 
 ## Log
