@@ -94,3 +94,19 @@ import toths from "./toths";
 toths.settings.import("filepath/settings.json");
 
 ```
+
+## API
+
+Exporta uma camada do express.
+
+Este método já vem com a configuração de middleware necessária para trabalhar com JSON.
+
+```ts
+import toths from "toths"
+
+const api = toths.api
+
+api.get("/", (req, res) => {
+  res.status(200).send()
+})
+```
