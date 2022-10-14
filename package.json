@@ -6,7 +6,7 @@
   "author": "devjosecarlosteles <devjosecarlosteles@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "jest",
+    "test": "jest --silent --coverage",
     "dev": "tsc && node dist/usefk.js"
   },
   "devDependencies": {

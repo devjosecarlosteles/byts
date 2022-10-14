@@ -1,4 +1,8 @@
 /node_modules
-.env
-/usefk.ts
 /dist
+
+# files
+
+.env
+usefk.ts
+settings.json

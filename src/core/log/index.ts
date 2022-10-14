@@ -1,7 +1,8 @@
 import { IGenericLog } from '../../interfaces/IGenericLog';
 import fs from 'fs';
-import { createFile } from './utils/createFile';
+import { createFile } from './utils/create-log-file';
 
+ // function should return the division of two numbers
 
 const messageDefault = (message: string) => console.log(`[INFO] - ${ new Date()} - ${ message }`);
 

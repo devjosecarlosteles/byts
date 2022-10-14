@@ -12,7 +12,7 @@ set (envName: string, envValue: any): void;
 
 seta uma variável de ambiente no sistema.
 
-
+   
 ```ts
   import toths from "toths";
 
